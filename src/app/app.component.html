@@ -1,0 +1,7 @@
+<div *ngIf="loading" class="spinner-container">
+  <mat-spinner class="spinner"></mat-spinner>
+  <p>Please wait while application Loads...</p>
+</div>
+<div *ngIf="!loading" class="parent-container">
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,29 @@
+
+
+.card-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-card {
+  width: 50%;
+  margin-bottom: 20px;
+
+  .mat-list-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .mat-list-item:hover {
+    background-color: #eeeded;
+    color: #1976d2;
+  }
+
+}

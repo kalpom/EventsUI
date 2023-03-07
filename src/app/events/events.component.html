@@ -1,0 +1,13 @@
+
+<div class="card-container">
+  <mat-card>
+    <mat-card-title ><u><h1>List Of Events</h1></u></mat-card-title>
+    <mat-card-content>
+      <mat-list *ngFor="let list of eventLists$ | async" role="list">
+        <mat-list-item (click)="onEventClick(list.id)" role="listitem">{{list.title}}</mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+

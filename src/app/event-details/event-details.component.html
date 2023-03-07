@@ -1,0 +1,22 @@
+
+<div *ngIf="loading" class="spinner-container">
+  <mat-spinner class="spinner"></mat-spinner>
+  <p>Please wait while the event details load...</p>
+</div>
+
+<div *ngIf="!loading && eventListItem$" class="card-container" >
+  <div *ngFor=" let list of eventListItem$ | async">
+  <mat-card>
+    <mat-card-title ><u><h1>Event details</h1></u></mat-card-title>
+    <mat-card-title>{{ list.title || '' }}</mat-card-title>
+    <mat-card-subtitle>{{ list.date || '' | date:'longDate' }}</mat-card-subtitle>
+    <mat-card-content>
+      <p><b>Description: </b> <br> {{list.description || ''}}</p>
+      <p><b>Notes: </b> <br>{{list.notes || ''}}</p>
+    </mat-card-content>
+    <mat-card-actions class="mat-elevation-z2">
+      <button (click)="onBackClick()" mat-button >Back to the List</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+</div>
